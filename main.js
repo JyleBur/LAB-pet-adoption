@@ -238,6 +238,14 @@ const pets = [
     specialSkill: "Doesn’t get weirded out by the word “moist.”",
     type: "dino",
     imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
+  },
+  {
+    id: 21,
+    name: "Jyle",
+    color: "Red",
+    specialSkill: "Tiny but mighty”",
+    type: "dawg",
+    imageUrl: "https://images.pexels.com/photos/3687770/pexels-photo-3687770.jpeg"
   }
 ];
 
