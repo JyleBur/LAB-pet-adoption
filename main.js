@@ -252,16 +252,51 @@ const pets = [
 
 const targetingApp = document.querySelector("#app");
 
-let domString = "";
-for (const animal of pets) {
-  // CARD FROM BOOTSTRAP: https://getbootstrap.com/docs/5.1/components/card/#example Removed the button
-  domString += `<div class="card" style="width: 18rem;">
-      <img src=${animal.imageUrl} class="card-img-top" alt=${animal.name}>
-      <div class="card-body">
-        <h5 class="card-title">${animal.specialSkill}</h5>
-        <p>Type: ${animal.type}</p>
-      </div>
-    </div>`;
+// Render to DOM utility function
+const renderToDom = (divId, htmlToRender) => {
+  const selectedDiv = document.querySelector(divId);
+  selectedDiv.innerHTML = htmlToRender;
 };
 
-targetingApp.innerHTML = domString;
+const cardsOnDom = (array) => {
+  let domString = "";
+  for (const animal of array) {
+    domString += `<div class="card" style="width: 18rem;">
+    <img src="${animal.imageUrl}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">${animal.name}</p>
+    </div>
+  </div>`;
+  }
+
+  renderToDom("#app", domString);
+}
+
+cardsOnDom(pets);
+
+
+const filter = (petType) => {
+  // 1: accept an argument
+  // 2: filter array of pets and return only pets object type
+  const petTypeArray = [];
+
+  for (const pet of pets) {
+    if (pet.type === petType) {
+      petTypeArray.push(pet);
+    }
+  }
+
+  return petTypeArray;
+}
+
+// targetingApp.innerHTML = domString;
+
+const dogBtn = document.querySelector('#dog-btn');
+dogBtn.addEventListener('click', () => {
+  cardsOnDom(filter("dog"));
+});
+
+const catBtn = document.querySelector('#cat-btn');
+catBtn.addEventListener('click', () => {
+  cardsOnDom(filter("cat"));
+});
