@@ -131,8 +131,6 @@ const pets = [
 
 
 
-
-
 const targetingApp = document.querySelector("#app");
 
 // Render to DOM utility function
@@ -223,7 +221,7 @@ const createPet = (e) => {
     name: document.querySelector("#name").value,
     color: document.querySelector("#color").value,
     specialSkill: document.querySelector("#specialSkill").value,
-    type: document.querySelector("#pet-selector").value,
+    type: document.querySelector("#type").value,
     imageUrl: document.querySelector("#image").value
   }
 
