@@ -197,7 +197,7 @@ catBtn.addEventListener('click', () => {
 
 const dinoBtn = document.querySelector('#dino-btn');
 
-catBtn.addEventListener('click', () => {
+dinoBtn.addEventListener('click', () => {
   cardsOnDom(filter("dino"));
 });
 
