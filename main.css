@@ -1,0 +1,21 @@
+#app {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form {
+    justify-content: center;
+    text-align: center;
+}
+
+.pet-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.form-check {
+    justify-content: center;
+    display: inline-block;
+    flex-wrap: wrap;
+}
