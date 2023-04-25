@@ -146,8 +146,11 @@ const cardsOnDom = (array) => {
     <img src="${animal.imageUrl}" class="card-img-top" alt="...">
     <div class="card-body">
       <p class="card-text">${animal.name}</p>
+      <hr>
       <p class="card-text">${animal.color}</p>
+      <hr>
       <p class="card-text">${animal.specialSkill}</p>
+      <hr>
       <p class="card-text">${animal.type}</p>
       <button class="btn btn-danger" id="delete--${animal.id}">Delete</button>
     </div>
