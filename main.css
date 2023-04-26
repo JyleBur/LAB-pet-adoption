@@ -19,3 +19,7 @@ form {
     display: inline-block;
     flex-wrap: wrap;
 }
+
+#pet-add {
+    margin: 15px 0px 5px 0px;
+}

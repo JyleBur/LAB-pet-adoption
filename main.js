@@ -129,22 +129,35 @@ const pets = [
   }
 ];
 
-
-
 const targetingApp = document.querySelector("#app");
+
+
 
 // Render to DOM utility function
 const renderToDom = (divId, htmlToRender) => {
   const selectedDiv = document.querySelector(divId);
   selectedDiv.innerHTML = htmlToRender;
 };
-
 const cardsOnDom = (array) => {
   let domString = "";
   for (const animal of array) {
+    let petColor = "";
+    switch (animal.type) {
+      case "dog":
+        petColor = "rgba(255, 0, 0, 0.5)";
+        break;
+      case "cat":
+        petColor = "rgba(0, 255, 0, 0.5)";
+        break;
+      case "dino":
+        petColor = "rgba(0, 0, 255, 0.5)";
+        break;
+      default:
+        petColor = "yellow";
+    }
     domString += `<div class="card" style="width: 18rem;">
     <img src="${animal.imageUrl}" class="card-img-top" alt="...">
-    <div class="card-body">
+    <div class="card-body" style="background-color: ${petColor}">
       <p class="card-text">${animal.name}</p>
       <hr>
       <p class="card-text">${animal.color}</p>
@@ -227,6 +240,7 @@ const createPet = (e) => {
     type: document.querySelector("#type").value,
     imageUrl: document.querySelector("#image").value
   }
+
 
   pets.push(newPetObj);
   cardsOnDom(pets);
