@@ -13,9 +13,9 @@
     <form>
 
         <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Add a pet
-  </button>
+  <button  id="pet-add" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Add a pet
+    </button>
   
   <!-- Modal -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -28,7 +28,7 @@
         <div class="modal-body">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="name" placeholder="Name" required>
-                <label fo   r="floatingInput">Name</label>
+                <label for="floatingInput">Name</label>
               </div>
       
               <div class="form-floating mb-3">
@@ -91,9 +91,9 @@
 -->
       <div class="pet-buttons">
         <button type="button" class="btn btn-outline-success" id="all-btn">All</button>
+        <button type="button" class="btn btn-outline-success" id="dog-btn">Dogs</button>
         <button type="button" class="btn btn-outline-success" id="cat-btn">Cats</button>
         <button type="button" class="btn btn-outline-success" id="dino-btn">Dinos</button>
-        <button type="button" class="btn btn-outline-success" id="dog-btn">Dogs</button>
       </div>
 
 
